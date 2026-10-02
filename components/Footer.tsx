@@ -106,7 +106,7 @@ export default function Footer() {
       },
       {
         name: "Facebook",
-        href: "https://facebook.com/YOUR_USERNAME",
+        href: "https://www.facebook.com/share/1VGWMvkr1i/?mibextid=wwXIfr",
       },
     ].map((item) => (
       <motion.a
