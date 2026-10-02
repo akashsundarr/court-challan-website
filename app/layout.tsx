@@ -1,6 +1,8 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
+import Navbar from "../components/Navbar";
+
 
 export const metadata: Metadata = {
   title: 'Court Challan | Professional Vehicle Legal Assistance',
@@ -39,6 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
+        <Navbar />
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

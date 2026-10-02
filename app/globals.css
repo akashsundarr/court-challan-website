@@ -6,7 +6,7 @@
 
 :root {
   color-scheme: light;
-  --background: #ffffff;
+  --background: #0d0907;
   --foreground: #111111;
   --radius: 0.75rem;
 }
@@ -18,17 +18,51 @@
   --font-sans: 'Arial', 'Helvetica Neue', sans-serif;
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--background); color: var(--foreground); font-family: Arial, 'Helvetica Neue', sans-serif; }
-a { transition: color 180ms ease, opacity 180ms ease; }
-button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
-::selection { background: #b9823f; color: white; }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #0d0907;
+}
+
+body {
+  margin: 0;
+  background: #0d0907;
+  color: var(--foreground);
+  font-family: Arial, 'Helvetica Neue', sans-serif;
+}
+
+a {
+  transition: color 180ms ease, opacity 180ms ease;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: #b9823f;
+  color: white;
+}
 
 @media (max-width: 640px) {
-  .hero-copy { letter-spacing: -0.055em; }
+  .hero-copy {
+    letter-spacing: -0.055em;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }
