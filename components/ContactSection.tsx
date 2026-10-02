@@ -343,7 +343,17 @@ function ContactInfo() {
         <InfoRow icon={PhoneCall} text="+91 0484 358 2847" />
         <InfoRow icon={Smartphone} text="+91 99951 55702" />
         <InfoRow icon={Mail} text="uniquewehelp@gmail.com" />
-        <InfoRow icon={MapPin} text="Unique Online Solutions, Kaloor" />
+
+        <a
+          href="https://www.google.com/maps?q=Unique+online+solutions,+Ammu+sahib+lane,+kaloor+kochin,+Desabhimani+Rd,+Kochi,+Kerala+682017"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group block cursor-pointer"
+        >
+          <div className="transition-all group-hover:translate-x-1">
+            <InfoRow icon={MapPin} text="Unique Online Solutions, Kaloor" />
+          </div>
+        </a>
       </div>
     </div>
   );
