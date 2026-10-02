@@ -1,19 +1,9 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import {
-  ArrowUpRight,
-  Check,
-  Clock3,
-  Mail,
-  MapPin,
-  Phone,
-} from "lucide-react";
-import {
-  motion,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { ArrowUpRight, Check, Clock3, Mail, MapPin, Phone } from "lucide-react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { PhoneCall, Smartphone } from "lucide-react";
 
 import WhatsAppButton from "./WhatsAppButton";
 
@@ -61,7 +51,6 @@ export default function ContactSection() {
 
       {/* Content */}
       <div className="relative mx-auto grid max-w-[900px] items-center gap-7 md:grid-cols-[1fr_1.05fr]">
-
         {/* Contact Form */}
         <motion.div
           initial={{ opacity: 0, y: 24, filter: "blur(4px)" }}
@@ -151,11 +140,15 @@ function ContactForm() {
             `Enquiry submission failed (HTTP ${response.status}). Please try again.`,
           );
         }
-        throw new Error("The enquiry service returned an unreadable response. Please try again.");
+        throw new Error(
+          "The enquiry service returned an unreadable response. Please try again.",
+        );
       }
 
       if (typeof result !== "object" || result === null) {
-        throw new Error("The enquiry service returned an invalid response. Please try again.");
+        throw new Error(
+          "The enquiry service returned an invalid response. Please try again.",
+        );
       }
 
       const resultRecord = result as Record<string, unknown>;
@@ -176,7 +169,9 @@ function ContactForm() {
             ? resultRecord.id
             : "";
       if (!returnedId) {
-        throw new Error("The enquiry service did not return an enquiry ID. Please try again.");
+        throw new Error(
+          "The enquiry service did not return an enquiry ID. Please try again.",
+        );
       }
 
       setEnquiryId(returnedId);
@@ -345,8 +340,8 @@ function ContactInfo() {
       </div>
 
       <div className="mt-10 flex flex-col gap-2 text-sm">
-        <InfoRow icon={Phone} text="+91 04843582847" />
-        <InfoRow icon={Clock3} text="9995155702" />
+        <InfoRow icon={PhoneCall} text="+91 0484 358 2847" />
+        <InfoRow icon={Smartphone} text="+91 99951 55702" />
         <InfoRow icon={Mail} text="uniquewehelp@gmail.com" />
         <InfoRow icon={MapPin} text="Unique Online Solutions, Kaloor" />
       </div>

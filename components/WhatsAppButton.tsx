@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, MessageCircle } from "lucide-react";
 
 const WHATSAPP_URL =
-  "https://wa.me/919XXXXXXXXX?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services.";
+  "https://wa.me/917902533313?text=Hi%2C%20I%20need%20help%20with%20a%20vehicle%20court%20challan.%20Could%20you%20please%20assist%20me%20with%20the%20process%3F";
 
 export default function WhatsAppButton({
   dark = false,

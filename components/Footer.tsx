@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 
 const ease = [0.22, 1, 0.36, 1];
 
-const WHATSAPP_URL = "https://wa.me/919XXXXXXXXX";
+const WHATSAPP_URL =
+  "https://wa.me/917902533313?text=Hi%2C%20I%20need%20help%20with%20a%20vehicle%20court%20challan.%20Could%20you%20please%20assist%20me%20with%20the%20process%3F";
 
 const reveal = {
   hidden: {
@@ -44,7 +45,7 @@ export default function Footer() {
             <img
               src="/court-challan-logo.png"
               alt="Court Challan"
-              className="h-auto w-[140px] object-contain"
+              className="h-auto w-[240px] object-contain"
             />
           </a>
 
@@ -90,28 +91,40 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Socials */}
-          <div>
-            <h3 className="mb-5 font-medium tracking-wide text-[#d6b79a]">
-              Socials
-            </h3>
+         {/* Socials */}
+<div>
+  <h3 className="mb-5 font-medium tracking-wide text-[#d6b79a]">
+    Socials
+  </h3>
 
-            <div className="flex flex-col gap-4">
-              {["Twitter", "Instagram", "Facebook"].map((item) => (
-                <motion.a
-                  key={item}
-                  whileHover={{
-                    x: 3,
-                    color: "#ffffff",
-                  }}
-                  className="text-white/60 transition-colors"
-                  href="#"
-                >
-                  {item}
-                </motion.a>
-              ))}
-            </div>
-          </div>
+  <div className="flex flex-col gap-4">
+    {[
+
+      {
+        name: "Instagram",
+        href: "https://www.instagram.com/uniquewehelp?stkn=MW1xb2Q4Y2hkMHNwNQ==",
+      },
+      {
+        name: "Facebook",
+        href: "https://facebook.com/YOUR_USERNAME",
+      },
+    ].map((item) => (
+      <motion.a
+        key={item.name}
+        href={item.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        whileHover={{
+          x: 3,
+          color: "#ffffff",
+        }}
+        className="text-white/60 transition-colors"
+      >
+        {item.name}
+      </motion.a>
+    ))}
+  </div>
+</div>
         </div>
       </div>
     </motion.footer>
