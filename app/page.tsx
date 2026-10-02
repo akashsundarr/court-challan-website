@@ -29,7 +29,7 @@ import {
 } from "lucide-react";
 
 const WHATSAPP_URL =
-  "https://wa.me/919999155702?text=Hello%20Court%20Challan%2C%20I%20need%20assistance.";
+  "https://wa.me/917902533313?text=Hello%20Court%20Challan%2C%20I%20need%20assistance.";
 const heroImage = "/court-hero.png";
 const challanImage = "/court-challan-service.png";
 const blacklistImage = "/blacklist-service.png";
